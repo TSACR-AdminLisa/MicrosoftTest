@@ -5,8 +5,8 @@ namespace DifferentEmailsCount
     class Program
     {
 
-        static string[] emails = 
-        { 
+        static string[] emails =
+        {
             "test.email+alex@leetcode.com",
             "test.e.mail+bob.cathy@leetcode.com",
             "testemail+david@lee.tcode.com" ,
@@ -16,6 +16,15 @@ namespace DifferentEmailsCount
             "b@leetcode.com",
             "c@leetcode.com"
         };
+
+        //static string[] emails =
+        //{
+        //    "test.email+alex@leetcode.com",
+        //    "testema.il+david@lee.tcode.com",
+        //    "a@leetcode.com",
+        //    "b@leetcode.com",
+        //    "c@leetcode.com"
+        //};
 
         static void Main(string[] args)
         {
@@ -82,6 +91,11 @@ namespace DifferentEmailsCount
 
             for (int i = 0; i < emailArray.Length; i++)
             {
+                if (i == 0)
+                {
+                    diffEmails += 1;
+                }
+
                 for (int j = i + 1; j < emailArray.Length; j++)
                 {
                     if (!String.IsNullOrEmpty(tempEmail))
@@ -97,8 +111,8 @@ namespace DifferentEmailsCount
                         diffEmails += 1;
                         tempEmail = emailArray[j];
                     }
-
                 }
+
                 if (diffEmails > 0) return diffEmails;
             }
 
