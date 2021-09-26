@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31521.260
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DifferentEmailsCount", "DifferentEmailsCount\DifferentEmailsCount.csproj", "{D5E82994-6581-46D6-A17E-3662DDD535F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaximumConsecutiveNumbers", "MaximumConsecutiveNumbers\MaximumConsecutiveNumbers.csproj", "{9AAA391E-5335-4BE5-83E4-43ADE087AE35}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcersisesWithArrays", "MaximumConsecutiveNumbers\ExcersisesWithArrays.csproj", "{9AAA391E-5335-4BE5-83E4-43ADE087AE35}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
