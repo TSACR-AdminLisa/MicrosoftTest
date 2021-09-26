@@ -86,35 +86,48 @@ namespace DifferentEmailsCount
 
         private static int TotalDifferentValidEmails(string[] emailArray)
         {
-            int diffEmails = 0;
+            int sameEmails = 0;
+            int count = 0;
             string tempEmail = string.Empty;
 
             for (int i = 0; i < emailArray.Length; i++)
             {
-                if (i == 0)
+                count = i + 1;
+                if (count < emailArray.Length)
                 {
-                    diffEmails += 1;
+                    if (emailArray[i] == emailArray[i + 1]) sameEmails++;
+                }
+                else
+                {
+                    if (emailArray[i] == emailArray[i - 1]) sameEmails++;
                 }
 
-                for (int j = i + 1; j < emailArray.Length; j++)
-                {
-                    if (!String.IsNullOrEmpty(tempEmail))
-                    {
-                        if (emailArray[i] != emailArray[j] && emailArray[j] != tempEmail)
-                        {
-                            diffEmails += 1;
-                            tempEmail = emailArray[j];
-                        }
-                    }
-                    else if (emailArray[i] != emailArray[j])
-                    {
-                        diffEmails += 1;
-                        tempEmail = emailArray[j];
-                    }
-                }
+                //if (i == 0)
+                //{
+                //    diffEmails += 1;
+                //}
 
-                if (diffEmails > 0) return diffEmails;
+                //for (int j = i + 1; j < emailArray.Length; j++)
+                //{
+                //    if (!String.IsNullOrEmpty(tempEmail))
+                //    {
+                //        if (emailArray[i] != emailArray[j] && emailArray[j] != tempEmail)
+                //        {
+                //            diffEmails += 1;
+                //            tempEmail = emailArray[j];
+                //        }
+                //    }
+                //    else if (emailArray[i] != emailArray[j])
+                //    {
+                //        diffEmails += 1;
+                //        tempEmail = emailArray[j];
+                //    }
+                //}
+
+                //if (diffEmails > 0) return diffEmails;
             }
+
+            int diffEmails = emailArray.Length - sameEmails;
 
             return diffEmails;
         }
